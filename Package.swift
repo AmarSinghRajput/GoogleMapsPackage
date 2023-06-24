@@ -12,8 +12,10 @@ let package = Package(
             targets: ["GoogleMapsPackage", "GoogleMaps", "GoogleMapsBase", "GoogleMapsCore"]),
     ],
     dependencies: [
-        // Dependencies declare other packages that this package depends on.
-        // .package(url: /* package url */, from: "1.0.0"),
+      .package(
+        url: "https://github.com/googlemaps/google-maps-ios-utils.git",
+        .upToNextMinor(from: "4.2.2")
+      )
     ],
     targets: [
             .target(
