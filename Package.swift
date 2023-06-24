@@ -9,13 +9,11 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "GoogleMapsPackage",
-            targets: ["GoogleMapsPackage", "GoogleMaps", "GoogleMapsBase", "GoogleMapsCore"]),
+            targets: ["GoogleMaps", "GoogleMapsBase", "GoogleMapsCore"]),
     ],
     dependencies: [
-      .package(
-        url: "https://github.com/googlemaps/google-maps-ios-utils.git",
-        .upToNextMinor(from: "4.2.2")
-      )
+        // Dependencies declare other packages that this package depends on.
+        // .package(url: /* package url */, from: "1.0.0"),
     ],
     targets: [
             .target(
